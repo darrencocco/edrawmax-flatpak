@@ -1,0 +1,47 @@
+id: au.id.cocco.packages.flatpak.EdrawMax
+tags:
+  - proprietary
+command: edrawmax
+runtime: org.freedesktop.Platform
+runtime-version: '24.08'
+sdk: org.freedesktop.Sdk
+finish-args:
+  - --share=ipc
+  - --device=dri
+  - --socket=x11
+  - --socket=pulseaudio
+  - --share=network
+  - --filesystem=xdg-documents
+modules:
+  - name: kerberos
+    subdir: src
+    sources:
+      - type: archive
+        url: https://kerberos.org/dist/krb5/1.21/krb5-1.21.3.tar.gz
+        sha256: b7a4cd5ead67fb08b980b21abd150ff7217e85ea320c9ed0c6dadd304840ad35
+  - name: edrawmax
+    buildsystem: simple
+    build-commands:
+      - cp -r opt/apps/edrawmax ${FLATPAK_DEST}/
+      - install -Dm755 edrawmax ${FLATPAK_DEST}/bin/edrawmax
+      - install -Dm644 edrawmax.desktop ${FLATPAK_DEST}/share/applications/${FLATPAK_ID}.desktop
+      - install -Dm644 metainfo.xml ${FLATPAK_DEST}/share/metainfo/${FLATPAK_ID}.metainfo.xml
+      - install -Dm644 edrawmax.desktop ${FLATPAK_DEST}/share/application/${FLATPAK_ID}.desktop
+      - install -Dm644 usr/share/icons/hicolor/scalable/apps/edrawmax.svg ${FLATPAK_DEST}/share/icons/hicolor/scalable/apps/${FLATPAK_ID}.svg
+      - install -Dm644 usr/share/icons/hicolor/scalable/mimetypes/application-x-eddx.svg ${FLATPAK_DEST}/share/icons/hicolor/scalable/mimetypes/${FLATPAK_ID}.application-x-eddx.svg
+      - install -Dm644 application-x-eddx.xml ${FLATPAK_DEST}/share/mime/packages/${FLATPAK_ID}.application-x-eddx.xml
+    sources:
+      - type: archive
+        url: https://download.wondershare.com/prd/edrawmax_full5371.rpm
+        sha256: 1ef71f2d56c093f809cf475cd3b0f17d813a96cbc143a35d7ae1fd51984560a6
+        strip-components: 0
+        only-arches:
+          - x86_64
+      - type: file
+        path: edrawmax.desktop
+      - type: file
+        path: metainfo.xml
+      - type: file
+        path: edrawmax
+      - type: file
+        path: application-x-eddx.xml

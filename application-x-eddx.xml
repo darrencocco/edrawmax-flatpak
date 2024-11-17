@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mime-info xmlns='http://www.freedesktop.org/standards/shared-mime-info'>
+	<mime-type type="application/x-eddx">
+		<comment>EdrawMax File</comment>
+		<generic-icon name="au.id.cocco.packages.flatpak.EdrawMax.application-x-eddx" />
+		<glob-deleteall/>
+		<glob pattern="*.eddx"/>
+	</mime-type>
+</mime-info>

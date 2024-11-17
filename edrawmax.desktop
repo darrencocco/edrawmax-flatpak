@@ -1,0 +1,8 @@
+[Desktop Entry]
+Type=Application
+Name=EdrawMax
+Comment=All-in-one Diagram Software
+Icon=au.id.cocco.packages.flatpak.EdrawMax
+Exec=edrawmax
+MimeType=application/x-eddx
+Categories=Office;FlowChart;Chart;ProjectManagement

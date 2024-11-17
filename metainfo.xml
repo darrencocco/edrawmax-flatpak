@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component type="desktop-application">
+  <id>au.id.cocco.packages.flatpak.EdrawMax</id>
+
+  <name>EdrawMax (unofficial)</name>
+  <summary>All-in-one Diagram Software</summary>
+  <description>
+    <p>
+      Multi-purpose diagram tool with a library of shapes and icons for almost any kind of info-graphic you might want to make. Useful for flow charts, electrical engineering, software planning, org charts etc.
+    </p>
+    <p>
+      Please note that this is an unofficial effort by a third party to repackage the vendor's
+      software for distribution via flatpak to offer more installation options, especially for
+      those running immutable distros like Fedora Silverblue.
+    </p>
+  </description>
+
+  <url type="homepage">https://edrawmax.wondershare.com/</url>
+  <url type="faq">https://support.wondershare.com/how-tos/edrawmax/</url>
+
+  <metadata_license>MIT</metadata_license>
+  <project_license>LicenseRef-proprietary=https://www.wondershare.com/company/end-user-license-agreement.html</project_license>
+
+  <content_rating type="oars-1.1"> <!-- unsure due to new AI features -->
+    <content_attribute id="social-info">moderate</content_attribute>
+  </content_rating>
+
+  <developer id="com.wondershare">
+    <name>Wondershare</name>
+  </developer>
+
+  <screenshots>
+    <screenshot type="default">
+      <image>http://darrencocco.github.io/edrawmax-flatpak/screenshots/home.png</image>
+      <caption>Start page</caption>
+    </screenshot>
+    <screenshot>
+      <image>http://darrencocco.github.io/edrawmax-flatpak/screenshots/editing.png</image>
+      <caption>Editing a diagram</caption>
+    </screenshot>
+    <screenshot>
+      <image>http://darrencocco.github.io/edrawmax-flatpak/screenshots/symbol-library.png</image>
+      <caption>Symbol library</caption>
+    </screenshot>
+  </screenshots>
+
+  <launchable type="desktop-id">au.id.cocco.packages.flatpak.EdrawMax.desktop</launchable>
+
+  <icon type="stock">au.id.cocco.packages.flatpak.EdrawMax</icon>
+
+  <categories>
+    <category>Office</category>
+    <category>FlowChart</category>
+    <category>Chart</category>
+    <category>ProjectManagement</category>
+  </categories>
+
+  <provides>
+    <binary>edrawmax</binary>
+    <mediatype>application/x-eddx</mediatype>
+  </provides>
+
+  <releases>
+    <release version="14.0.0-1" date="2024-11-11">
+      <description>
+        <p>First release></p>
+      </description>
+    </release>
+  </releases>
+</component>
